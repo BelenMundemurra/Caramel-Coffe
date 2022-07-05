@@ -1,0 +1,168 @@
+/*Estilos header + footer y generales*/
+/*Fuentes*/
+$fuente-body:Roboto, sans-serif;
+$fuente-h1:'Montserrat', sans-serif;
+$fuente-title: Staatliches, cursive;
+
+/*Estilo header*/
+$color-header: rgb(255, 255, 255);
+$header-color-background: black;
+
+/*Footer*/
+$footer-background: rgb(16, 15, 15);
+$footer-color: rgb(234, 226, 226);
+$footer-color-hover: rgb(255, 255, 255);
+
+/*Reset css*/
+* {
+    margin: 0;
+    padding: 0;
+}   
+
+body {
+    text-align: center;
+    font-family: $fuente-body;
+    background-color: rgba(231, 223, 213, 0.188);
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+/*header*/
+header {
+    background-color: $header-color-background;
+    
+    h1{
+        font-family: $fuente-h1;
+        color: $color-header;
+        margin: 0;
+        font-size: 1.6rem;
+    }
+}
+
+/*nav*/
+.navbar {
+    margin: 0px 7px;
+    height: 6vh;
+
+    .navbar-nav {
+        position: relative;
+        z-index: 1;
+        background-color: $header-color-background;
+    }
+    .nav-item a {
+        color: $color-header !important;
+        margin-right: 25px;
+    }
+
+    .nav-item a:hover {
+        border-bottom: 1px solid $color-header;
+    }
+
+    button {
+        border: none;
+    }
+} 
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+/*Footer*/
+footer {
+    margin-top: 40px;
+    background-color: $footer-background;
+    display: flex;
+    justify-content: center;
+
+    i {
+        font-size: 2.5rem;
+        color: $footer-color;
+    }
+
+    li {
+        list-style: none;
+        
+        a {
+            color: $footer-color;
+        }
+
+        a:hover , i:hover{
+            color: $footer-color-hover;
+            text-decoration: none;
+        }
+    }  
+
+    .socialmedia {
+        display: inline-flex;
+    }
+}
+
+/*Estilo botones*/
+/*Boton negro*/
+.buttonBlack a{
+    display: inline-block;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 30px ;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.428);
+    width: 15vh;
+}
+
+/*Boton Formulario*/
+.buttonForm {
+    border-radius: 0;
+    font-weight: bold;
+    margin: 2%;
+    padding: 8px;
+    width: 15vh;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid transparent;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.428);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+/*Boton bordo*/
+.buttonWhite a {
+    border: none;
+    font-weight: bold;
+    padding: 1.5vh;
+    margin: 2vh;
+    color: rgb(255, 255, 255);
+    background-color: #510712;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.368);
+    margin-bottom: 50px;
+    width: 20vh;
+}
+
+/*@media header*/
+@media only screen and (min-width:768px) and (max-width:1023px){
+    header {
+        h1{
+            font-size: 1rem;
+        }
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        margin-right: 0.8px;
+    }
+
+    .navbar {
+        .nav-item a {
+            margin-right: 5px;
+        }
+    }
+}
+
+@media only screen and (max-width:395px){
+    header {
+        h1{
+            font-size: 0.9rem;
+        }
+    }
+}

@@ -1,0 +1,165 @@
+/*Estilos Product Page*/
+/*Categorías*/
+$h3-color: rgb(255, 255, 255);
+$h3-color_new: rgb(0, 0, 0);
+
+/*Titulo de categoría*/
+.titleCat {
+    h2 {
+        width: 100%;
+        padding: 20px;
+        background-image: url(../img/makeup.jpg);
+        background-size: cover;
+        color: $h3-color;
+        font-weight: bold;
+    }
+}
+
+/*Estilos Productos*/
+.allProducts {
+    div {
+        display: flex;
+        justify-content: center;
+    }
+    
+    article{
+        background-color: rgba(184, 174, 174, 0.058);
+        margin: 10px;
+        
+        h3{
+            padding: 10px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1rem; 
+            color: rgb(72, 70, 70);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: rgb(38, 37, 37);
+        }
+
+        img {
+            padding: 15px;
+            height: 300px;
+            width: 250px;
+        }
+    } 
+}
+
+.product_list {
+    margin-top: 15px;
+}
+
+/*Estilo new.html*/
+.titleNewCat {
+    background-image: url(../img/new.jpg);
+    background-size: cover;
+    box-shadow: 1px 13px 14px -8px rgba(0, 0, 0, 0.294);
+
+    h2{
+        color: $h3-color_new;
+        font-weight: bold;
+        font-size: 2.5rem;
+        padding: 20px;
+    }
+}
+
+/* Estilo about_us.html*/
+.video_i {
+    background-color: black;
+
+    iframe {
+        border: none;
+    }
+}
+
+.about_text {
+    padding: 50px;
+    height: 100%;
+    background-color: rgba(223, 182, 153, 0.537);
+
+    p {
+        display: block;
+    }
+
+    h3 {
+        font-family: $fuente-title;
+    }
+}
+
+.carousel_img img {
+    width: 500px;
+}
+
+.marca_info {
+    margin: auto;
+    padding: 40px;
+    div {
+        align-self: center;
+        h3 {
+            font-family: $fuente-title;
+        }
+    }
+}
+
+/* Estilo product_detail.html*/
+.product_detail {
+    text-align: left;
+    display: flex;
+    padding: 50px;
+    height: auto;
+
+    img {
+        width: 700px;
+        height: 700px;
+    }
+
+    div {
+        padding: 30px;
+
+        h4 {
+            font-family: $fuente-title; 
+            font-size: 2rem;
+        }
+            
+        p {
+            font-size: 1.3rem;
+        }
+
+        .price {
+            font-weight: bold;
+            padding-top: 20px;
+        }
+    }
+
+}
+
+/*@media product_detail.html*/
+@media only screen and (max-width: 1240px) {
+    .product_detail {
+        flex-direction: column;
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        div {
+            h4 {
+                font-family: $fuente-title; 
+                font-size: 1.5rem;
+            }
+                
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
