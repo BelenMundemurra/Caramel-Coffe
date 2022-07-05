@@ -1,6 +1,5 @@
 @charset "UTF-8";
-/*Imports scss*/
-/*Estilos header + footer y generales*/
+/*Imports scss*/ /*Estilos header + footer y generales*/
 /*Fuentes*/
 /*Estilo header*/
 /*Footer*/
@@ -58,7 +57,6 @@ header h1 {
 
 /*Footer*/
 footer {
-  margin-top: 40px;
   background-color: rgb(16, 15, 15);
   display: flex;
   justify-content: center;
@@ -126,12 +124,10 @@ footer .socialmedia {
   header h1 {
     font-size: 1rem;
   }
-
   .nav-link {
     font-size: 0.9rem;
     margin-right: 0.8px;
   }
-
   .navbar .nav-item a {
     margin-right: 5px;
   }
@@ -153,8 +149,9 @@ footer .socialmedia {
   justify-content: center;
   flex-direction: column;
   justify-content: end;
-  color: #000000;
+  color: #ffffff;
   border-radius: 0;
+  margin-bottom: 0;
 }
 .jumbotron h2 {
   font-size: 5rem;
@@ -173,83 +170,8 @@ footer .socialmedia {
   transform: scale(1.1);
 }
 
-/*Categorias productos*/
-.products div {
-  width: 100%;
-}
-.products article img {
-  height: auto;
-  width: 100%;
-  box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.267);
-}
-.products h2 {
-  font-family: Staatliches, cursive;
-  font-size: 3rem;
-}
-.products h3 {
-  margin: 20px;
-}
-.products article {
-  margin: 20px;
-  transition: transform 1s;
-}
-.products article a:hover {
-  transform: scale(1.05);
-  text-decoration: none;
-}
-
-/*About us*/
-.about_us {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border: 3px solid;
-  width: 95%;
-  margin-top: 40px;
-}
-.about_us h2 {
-  margin: 3vh;
-  font-family: Staatliches, cursive;
-}
-.about_us p {
-  padding: 5px;
-}
-
-/*Form contacto*/
-.contact {
-  padding: 10px;
-}
-.contact h2 {
-  font-family: Staatliches, cursive;
-}
-.contact h2, .contact form {
-  margin: 2%;
-}
-.contact form {
-  text-align: left;
-  font-weight: bold;
-}
-.contact form input, .contact form select {
-  border-radius: 0.5;
-  border: 2px solid black;
-}
-.contact button {
-  width: 50%;
-}
-
 /*Estilos Product Page*/
 /*Categorías*/
-/*Titulo de categoría*/
-.titleCat h2 {
-  width: 100%;
-  padding: 20px;
-  background-image: url(../img/makeup.jpg);
-  background-size: cover;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-}
-
 /*Estilos Productos*/
 .allProducts div {
   display: flex;
@@ -266,9 +188,9 @@ footer .socialmedia {
 }
 .allProducts article p {
   font-size: 1rem;
-  color: rgb(72, 70, 70);
 }
 .allProducts article a {
+  color: rgb(255, 255, 255) !important;
   text-decoration: none;
 }
 .allProducts article a:hover {
@@ -295,85 +217,6 @@ footer .socialmedia {
   font-weight: bold;
   font-size: 2.5rem;
   padding: 20px;
-}
-
-/* Estilo about_us.html*/
-.video_i {
-  background-color: black;
-}
-.video_i iframe {
-  border: none;
-}
-
-.about_text {
-  padding: 50px;
-  height: 100%;
-  background-color: rgba(223, 182, 153, 0.537);
-}
-.about_text p {
-  display: block;
-}
-.about_text h3 {
-  font-family: Staatliches, cursive;
-}
-
-.carousel_img img {
-  width: 500px;
-}
-
-.marca_info {
-  margin: auto;
-  padding: 40px;
-}
-.marca_info div {
-  align-self: center;
-}
-.marca_info div h3 {
-  font-family: Staatliches, cursive;
-}
-
-/* Estilo product_detail.html*/
-.product_detail {
-  text-align: left;
-  display: flex;
-  padding: 50px;
-  height: auto;
-}
-.product_detail img {
-  width: 700px;
-  height: 700px;
-}
-.product_detail div {
-  padding: 30px;
-}
-.product_detail div h4 {
-  font-family: Staatliches, cursive;
-  font-size: 2rem;
-}
-.product_detail div p {
-  font-size: 1.3rem;
-}
-.product_detail div .price {
-  font-weight: bold;
-  padding-top: 20px;
-}
-
-/*@media product_detail.html*/
-@media only screen and (max-width: 1240px) {
-  .product_detail {
-    flex-direction: column;
-  }
-  .product_detail img {
-    width: 100%;
-    height: auto;
-  }
-  .product_detail div h4 {
-    font-family: Staatliches, cursive;
-    font-size: 1.5rem;
-  }
-  .product_detail div p {
-    font-size: 1rem;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

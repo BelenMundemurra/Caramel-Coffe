@@ -3,18 +3,6 @@
 $h3-color: rgb(255, 255, 255);
 $h3-color_new: rgb(0, 0, 0);
 
-/*Titulo de categoría*/
-.titleCat {
-    h2 {
-        width: 100%;
-        padding: 20px;
-        background-image: url(../img/makeup.jpg);
-        background-size: cover;
-        color: $h3-color;
-        font-weight: bold;
-    }
-}
-
 /*Estilos Productos*/
 .allProducts {
     div {
@@ -34,10 +22,10 @@ $h3-color_new: rgb(0, 0, 0);
 
         p {
             font-size: 1rem; 
-            color: rgb(72, 70, 70);
         }
 
         a {
+            color: rgb(255, 255, 255) !important;
             text-decoration: none;
         }
 
@@ -68,98 +56,6 @@ $h3-color_new: rgb(0, 0, 0);
         font-weight: bold;
         font-size: 2.5rem;
         padding: 20px;
-    }
-}
-
-/* Estilo about_us.html*/
-.video_i {
-    background-color: black;
-
-    iframe {
-        border: none;
-    }
-}
-
-.about_text {
-    padding: 50px;
-    height: 100%;
-    background-color: rgba(223, 182, 153, 0.537);
-
-    p {
-        display: block;
-    }
-
-    h3 {
-        font-family: $fuente-title;
-    }
-}
-
-.carousel_img img {
-    width: 500px;
-}
-
-.marca_info {
-    margin: auto;
-    padding: 40px;
-    div {
-        align-self: center;
-        h3 {
-            font-family: $fuente-title;
-        }
-    }
-}
-
-/* Estilo product_detail.html*/
-.product_detail {
-    text-align: left;
-    display: flex;
-    padding: 50px;
-    height: auto;
-
-    img {
-        width: 700px;
-        height: 700px;
-    }
-
-    div {
-        padding: 30px;
-
-        h4 {
-            font-family: $fuente-title; 
-            font-size: 2rem;
-        }
-            
-        p {
-            font-size: 1.3rem;
-        }
-
-        .price {
-            font-weight: bold;
-            padding-top: 20px;
-        }
-    }
-
-}
-
-/*@media product_detail.html*/
-@media only screen and (max-width: 1240px) {
-    .product_detail {
-        flex-direction: column;
-        img {
-            width: 100%;
-            height: auto;
-        }
-
-        div {
-            h4 {
-                font-family: $fuente-title; 
-                font-size: 1.5rem;
-            }
-                
-            p {
-                font-size: 1rem;
-            }
-        }
     }
 }
 

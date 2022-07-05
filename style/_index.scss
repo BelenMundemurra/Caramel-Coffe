@@ -1,6 +1,6 @@
 /*Estilos index.html*/
 /*Nuevos productos*/
-$jumbotron-color: #000000;
+$jumbotron-color: #ffffff;
 
 /*Nuevos productos*/
 .jumbotron {
@@ -14,7 +14,7 @@ $jumbotron-color: #000000;
     justify-content:end;
     color: $jumbotron-color;
     border-radius: 0;
-    
+    margin-bottom: 0;
     h2 {
         font-size: 5rem;
         padding: 10px;
@@ -33,83 +33,5 @@ $jumbotron-color: #000000;
 
     a:hover {
         transform: scale(1.1);
-    }
-}
-
-/*Categorias productos*/
-.products {
-    div {
-        width: 100%;
-    }
-
-    article img {
-        height: auto;
-        width: 100%;
-        box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.267);
-    }
-
-    h2 {
-        font-family: $fuente-title;
-        font-size: 3rem;
-    }
-
-    h3 {
-        margin: 20px;
-    }
-
-    article {
-        margin: 20px;
-        transition: transform 1s;
-    }
-
-    article a:hover {
-        transform: scale(1.05);
-        text-decoration: none;
-    }
-}
-
-/*About us*/
-.about_us {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; 
-    border: 3px solid;
-    width: 95%;
-    margin-top: 40px;
-
-    h2 {
-        margin: 3vh;
-        font-family: $fuente-title;
-    } 
-
-    p {
-        padding: 5px;
-    }
-}
-
-/*Form contacto*/
-.contact {
-    padding: 10px;
-
-    h2 {
-        font-family: $fuente-title;
-    }
-
-    h2, form {
-        margin: 2%;
-    }
-
-    form {
-        text-align: left;
-        font-weight: bold;
-        input,select {
-            border-radius: 0.5;
-            border: 2px solid black;
-        }
-    }
-
-    button {
-        width: 50%;
     }
 }
