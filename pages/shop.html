@@ -35,7 +35,7 @@
   <!--Header + navbar-->
   <header class="container-fluid">
     <nav class="navbar navbar-expand-md  navbar-dark">
-      <h1>CARAMEL COFFE SHOP</h1>
+      <h1>CARAMEL COFFE</h1>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -67,8 +67,8 @@
             <h3>Café arábica</h3>
             <p>El tipo de café que más se utiliza y a su vez que más apreciado resulta es el que se corresponde con las
               primeras variantes utilizadas para elaborar la bebida: el café arábica.</p>
-            <p>$1500</p>
-            <a href="./product_detail.html">COMPRAR</a>
+            <p>$500</p>
+            <a onclick="shop('Café arábica',500)" >COMPRAR</a>
           </article>
 
           <article class="col-xl-3 col-lg-4 col-md-6 col-12">
@@ -76,8 +76,8 @@
             <h3>Café robusta</h3>
             <p>Nivel elevado de cafeína, algo que provoca que el sabor que produce a la hora de beberse sea mucho más
               intenso. y con tono bastante más amargo.</p>
-            <p>$1700</p>
-            <a href="./product_detail.html">COMPRAR</a>
+            <p>$700</p>
+            <a onclick="shop('Café robusta',700)">COMPRAR</a>
           </article>
 
           <article class="col-xl-3 col-lg-4 col-md-6 col-12 ">
@@ -85,16 +85,16 @@
             <h3>Ristretto</h3>
             <p>Esta variante del espresso se caracteriza por tener la misma cantidad de café que el anterior pero
               emplear para ello una proporción menor de agua.</p>
-            <p>$2500</p>
-            <a href="./product_detail.html">COMPRAR</a>
+            <p>$520</p>
+            <a onclick="shop('Café Ristretto',520)">COMPRAR</a>
           </article>
 
           <article class="col-xl-3 col-lg-4 col-md-6 col-12 ">
             <img src="../img/coffe_shop.jpg" alt="Producto Macchiato">
             <h3>Macchiato</h3>
             <p>Tipo de café espresso a la cual se le agrega una ligera cantidad de leche, que manche o tiña el café.</p>
-            <p>$1700</p>
-            <a href="./product_detail.html">COMPRAR</a>
+            <p>$700</p>
+            <a onclick="shop('Café Macchiato',700)">COMPRAR</a>
           </article>
 
           <article class="col-xl-3 col-lg-4 col-md-6 col-12 ">
@@ -102,8 +102,8 @@
             <h3>Americano</h3>
             <p>El café americano es un tipo de café derivado del espresso el cual se caracteriza por añadir una cantidad
               de agua mucho mayor de lo habitual en este tipo de preparación.</p>
-            <p>$2600</p>
-            <a href="./product_detail.html">COMPRAR</a>
+            <p>$600</p>
+            <a onclick="shop('Café Americano',600)">COMPRAR</a>
           </article>
 
           <article class="col-xl-3 col-lg-4 col-md-6 col-12 ">
@@ -111,8 +111,8 @@
             <h3>Carajillo</h3>
             <p>El carajillo es un café preparado como un espresso al cual se le añade además de la infusión una cierta
               cantidad de alguna bebida espirituosa, siendo lo más general el brandy, el orujo o el whisky.</p>
-            <p>$2600</p>
-            <a href="./product_detail.html">COMPRAR</a>
+            <p>$600</p>
+            <a onclick="shop('Café Carajillo',600)">COMPRAR</a>
           </article>
         </div>
       </div>
@@ -120,22 +120,9 @@
   </main>
   <!-- Footer -->
   <footer class="text-center text-white">
-    <div class="container p-4 row">
-
-      <!--Informacion -->
-      <div class="col-lg-4 col-md-12">
-        <ul class="list-unstyled mb-0">
-          <li>
-            <a href="./about_us.html#info_us">Sobre Nosotros</a>
-          </li>
-          <li>
-            <a href="./about_us.html#legal">Términos y condiciones</a>
-          </li>
-        </ul>
-      </div>
-
+    <div class="container">
       <!--Redes sociales -->
-      <div class="col-lg-4 col-md-12">
+      <div>
         <ul class="mb-4 socialmedia">
           <!-- Instagram -->
           <li>
@@ -156,23 +143,6 @@
           </li>
         </ul>
       </div>
-
-      <!--Categorias-->
-      <div class="col-lg-4 col-md-12">
-        <ul class="list-unstyled mb-0">
-          <li>
-            <a href="./sombras.html">Sombras</a>
-          <li>
-            </td>
-          </li>
-          <li>
-            <a href="./rostro.html">Rostro</a>
-          </li>
-          <li>
-            <a href="./labiales.html">Labiales</a>
-          </li>
-        </ul>
-      </div>
     </div>
   </footer>
 
@@ -187,6 +157,8 @@
     integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
   </script>
 
+  <!--JavaScript-->
+  <script src="../index.js"></script>
 </body>
 
 </html>
