@@ -1,8 +1,7 @@
 //Pedidos de cafe y guardar todos los pedidos en un array
+const pedidos = []
 
 function shop(coffe, price) {
-    const pedidos = []
-
     while (true) {
         var combo = confirm("Desea realizar un pedido de " + coffe + "?");
     
@@ -30,11 +29,11 @@ function shop(coffe, price) {
                     this.precio = precio
                 }
             }
-    
+
             //Agregar pedido a la lista de pedidos
             const agregarPedidos = new Pedidos (nombre, coffe, cantidad, precio)
             pedidos.push(agregarPedidos)
-    
+
             //Realizar otro pedido
             var repuesta = confirm("Desea realizar otro pedido?");
     
@@ -49,4 +48,17 @@ function shop(coffe, price) {
     
     //Ver pedidos en la consola
     console.log(pedidos);
+}
+
+function cart(){
+    let precioFinal = 0 
+    const Coffe = (pedidos.map((element) => element.cantidad + " " + element.coffe + "\n" ));
+    const Precio = (pedidos.map((element) => (element.precio)));
+    let total = 0;
+
+    for (let i = 0; i < Precio.length; i++) {
+        total += Precio[i];
+    }
+
+    alert("Resumen de compra:\n" + Coffe +"\n Precio Total: \n" + total);
 }
