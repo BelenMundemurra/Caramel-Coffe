@@ -2,62 +2,64 @@
 const pedidos = []
 
 function shop(coffe, price) {
-    while (true) {
-        var combo = confirm("Desea realizar un pedido de " + coffe + "?");
-    
-        if (combo) {
-            let cantidad = parseFloat(prompt("Ingrese cantidad de " + coffe + " a llevar"));
-            let nombre = prompt("Ingrese su nombre");
-            let precio = 0;
-            let valor = price;
-            
-            function calcularPrecio(valor , cantidad) {
-                return (valor*cantidad);
-            }
-            
-            precio = calcularPrecio(valor, cantidad);
+    let cantidad = document.getElementById("cantidad_product").value;
+    let precio = 0;
+    let valor = price;
+    let text = document.getElementById("confirm_text");
 
-            //Resumen de compra
-            alert("Resumen de compra \nCliente: " + nombre + "\nProducto: " + coffe + "\nCantiad: " + cantidad + "\nPrecio Final: $" + precio);
-    
-            //Declarar objeto de pedidos
-            class Pedidos {
-                constructor(nombre, coffe, cantidad, precio) {
-                    this.nombre = nombre
-                    this.coffe = coffe
-                    this.cantidad = cantidad
-                    this.precio = precio
-                }
-            }
-
-            //Agregar pedido a la lista de pedidos
-            const agregarPedidos = new Pedidos (nombre, coffe, cantidad, precio)
-            pedidos.push(agregarPedidos)
-
-            //Realizar otro pedido
-            var repuesta = confirm("Desea realizar otro pedido?");
-    
-            if (!repuesta) {
-                break;
-            } 
-            
-        } else {
-            break;
-        }
+    function calcularPrecio(valor , cantidad) {
+        return (valor*cantidad);
     }
     
-    //Ver pedidos en la consola
-    console.log(pedidos);
+    precio = calcularPrecio(valor, cantidad);
+
+    //Declarar objeto de pedidos
+    class Pedidos {
+        constructor(coffe, cantidad, precio) {
+            this.coffe = coffe
+            this.cantidad = cantidad
+            this.precio = precio
+        }
+    }
+
+    //Agregar pedido a la lista de pedidos
+    const agregarPedidos = new Pedidos (coffe, cantidad, precio)
+    pedidos.push(agregarPedidos)
+
+    console.log(agregarPedidos);
+    
+    //Alerta de pedido realizado
+    text.innerText = "Producto " + coffe + " agregado al carrito con éxito";
+
+    //Almacenar informacion pedido
+    const pedidoAJson = JSON.stringify(pedidos);
+    //console.log(pedidoAJson);
+    localStorage.setItem('1',pedidoAJson);  
+
 }
 
 function cart(){
-    const Coffe = (pedidos.map((element) => element.cantidad + " " + element.coffe + "\n" ));
-    const Precio = (pedidos.map((element) => (element.precio)));
-    let total = 0;
+    let pedidosJson = localStorage.getItem('1');
+    const pedidosCart = JSON.parse(pedidosJson);
 
-    for (let i = 0; i < Precio.length; i++) {
-        total += Precio[i];
+    //console.log(pedidosCart)
+    let conteiner = document.getElementById("detail_coffe");
+
+    if (pedidosCart) {
+
+        const Coffe = (pedidosCart.map((element) => element.cantidad + " " + element.coffe + "\n" ));
+        const Precio = (pedidosCart.map((element) => (element.precio)));
+
+        //Precio total
+        const total = Precio.reduce((acc,el) => acc + el ,0)
+
+        //Resumen carrito
+        conteiner.innerHTML = "<h3>Producto: "+Coffe+"</h3><h3>Precio total: " + total + "</h3>";
+
+    } else {
+        //Resumen carrito
+        conteiner.innerHTML = "<h3>El carrito esta vacio</h3>";
     }
-
-    alert("Resumen de compra:\n" + Coffe +"\n Precio Total: \n" + total);
 }
+
+cart();

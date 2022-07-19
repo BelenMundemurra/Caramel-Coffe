@@ -48,7 +48,7 @@
             <a class="nav-link" href="./shop.html">TIENDA</a>
           </li>
           <li class="nav-item">
-            <button class="nav-link carrito" onclick="cart()">CARRITO</button>
+            <a class="nav-link" href="./cart_products.html">CARRITO</a>
           </li>
         </ul>
       </div>
@@ -63,59 +63,78 @@
         <h2>TIENDA</h2>
       </div>
       <!--Productos-->
+      <small id="confirm_text"></small>
       <div>
-        <div class="row container">
-          <article class="col-xl-3 col-lg-4 col-md-6 col-12">
-            <img src="../img/coffe_shop.jpg" alt="Producto Café arábica">
-            <h3>Café arábica</h3>
-            <p>El tipo de café que más se utiliza y a su vez que más apreciado resulta es el que se corresponde con las
-              primeras variantes utilizadas para elaborar la bebida: el café arábica.</p>
-            <p>$500</p>
-            <a onclick="shop('Café arábica',500)" >COMPRAR</a>
+        <div class="row container"> 
+          <article class="card col-xl-3 col-lg-4 col-md-6 col-12">
+            <img class="card-img-top" src="../img/coffe_shop.jpg" alt="Producto Café cortado">
+            <div class="card-body">
+              <h3 class="card-title">Café cortado</h3>
+              <p class="card-text">El tipo de café que más se utiliza y a su vez que más apreciado resulta es el que se corresponde con las
+                primeras variantes utilizadas para elaborar la bebida: el café arábica.</p>
+              <p class="card-text">$500</p>
+              <input class="card-text" type="number" id="cantidad_product" placeholder=" Ingrese cantidad">
+              <a onclick="shop('Café cortado',500)" class="btn btn-primary container">Agregar al carrito</a>
+            </div>
           </article>
 
-          <article class="col-xl-3 col-lg-4 col-md-6 col-12">
-            <img src="../img/coffe_shop.jpg" alt="Producto Café robust">
-            <h3>Café robusta</h3>
-            <p>Nivel elevado de cafeína, algo que provoca que el sabor que produce a la hora de beberse sea mucho más
-              intenso. y con tono bastante más amargo.</p>
-            <p>$700</p>
-            <a onclick="shop('Café robusta',700)">COMPRAR</a>
+          <article class="card col-xl-3 col-lg-4 col-md-6 col-12">
+            <img class="card-img-top" src="../img/coffe_shop.jpg" alt="Producto Café arábica">
+            <div class="card-body">
+              <h3 class="card-title">Café arábica</h3>
+              <p class="card-text">El tipo de café que más se utiliza y a su vez que más apreciado resulta es el que se corresponde con las
+                primeras variantes utilizadas para elaborar la bebida: el café arábica.</p>
+              <p class="card-text">$520</p>
+              <input class="card-text" type="number" id="cantidad_product" placeholder=" Ingrese cantidad">
+              <a onclick="shop('Café arábica',520)" class="btn btn-primary container">Agregar al carrito</a>
+            </div>
           </article>
 
-          <article class="col-xl-3 col-lg-4 col-md-6 col-12 ">
-            <img src="../img/coffe_shop.jpg" alt="Producto Ristretto">
-            <h3>Ristretto</h3>
-            <p>Esta variante del espresso se caracteriza por tener la misma cantidad de café que el anterior pero
-              emplear para ello una proporción menor de agua.</p>
-            <p>$520</p>
-            <a onclick="shop('Café Ristretto',520)">COMPRAR</a>
+          <article class="card col-xl-3 col-lg-4 col-md-6 col-12">
+            <img class="card-img-top" src="../img/coffe_shop.jpg" alt="Producto Café robust">
+            <div class="card-body">
+              <h3 class="card-title">Café robusta</h3>
+              <p class="card-text">Nivel elevado de cafeína, algo que provoca que el sabor que produce a la hora de beberse sea mucho más
+                intenso. y con tono bastante más amargo.</p>
+              <p class="card-text">$700</p>
+              <input class="card-text" type="number" id="cantidad_product" placeholder=" Ingrese cantidad">
+              <a onclick="shop('Café robusta',700)" class="btn btn-primary container">Agregar al carrito</a>
+            </div>
           </article>
 
-          <article class="col-xl-3 col-lg-4 col-md-6 col-12 ">
-            <img src="../img/coffe_shop.jpg" alt="Producto Macchiato">
-            <h3>Macchiato</h3>
-            <p>Tipo de café espresso a la cual se le agrega una ligera cantidad de leche, que manche o tiña el café.</p>
-            <p>$700</p>
-            <a onclick="shop('Café Macchiato',700)">COMPRAR</a>
+          <article class="card col-xl-3 col-lg-4 col-md-6 col-12">
+            <img class="card-img-top" src="../img/coffe_shop.jpg" alt="Producto Ristretto">
+            <div class="card-body">
+              <h3 class="card-title">Café Ristretto</h3>
+              <p class="card-text">Esta variante del espresso se caracteriza por tener la misma cantidad de café que el anterior pero
+                emplear para ello una proporción menor de agua.</p>
+              <p class="card-text">$540</p>
+              <input class="card-text" type="number" id="cantidad_product" placeholder=" Ingrese cantidad">
+              <a onclick="shop('Café Ristretto',540)" class="btn btn-primary container">Agregar al carrito</a>
+            </div>
           </article>
 
-          <article class="col-xl-3 col-lg-4 col-md-6 col-12 ">
-            <img src="../img/coffe_shop.jpg" alt="Producto Americano">
-            <h3>Americano</h3>
-            <p>El café americano es un tipo de café derivado del espresso el cual se caracteriza por añadir una cantidad
-              de agua mucho mayor de lo habitual en este tipo de preparación.</p>
-            <p>$600</p>
-            <a onclick="shop('Café Americano',600)">COMPRAR</a>
+          <article class="card col-xl-3 col-lg-4 col-md-6 col-12">
+            <img class="card-img-top" src="../img/coffe_shop.jpg" alt="Producto Macchiato">
+            <div class="card-body">
+              <h3 class="card-title">Café Macchiato</h3>
+              <p class="card-text">Tipo de café espresso a la cual se le agrega una ligera cantidad de leche, que manche o tiña el café.</p>
+              <p class="card-text">$700</p>
+              <input class="card-text" type="number" id="cantidad_product" placeholder=" Ingrese cantidad">
+              <a onclick="shop('Café Macchiato',700)" class="btn btn-primary container">Agregar al carrito</a>
+            </div>
           </article>
 
-          <article class="col-xl-3 col-lg-4 col-md-6 col-12 ">
-            <img src="../img/coffe_shop.jpg" alt="Producto Carajillo">
-            <h3>Carajillo</h3>
-            <p>El carajillo es un café preparado como un espresso al cual se le añade además de la infusión una cierta
-              cantidad de alguna bebida espirituosa, siendo lo más general el brandy, el orujo o el whisky.</p>
-            <p>$600</p>
-            <a onclick="shop('Café Carajillo',600)">COMPRAR</a>
+          <article class="card col-xl-3 col-lg-4 col-md-6 col-12">
+            <img class="card-img-top" src="../img/coffe_shop.jpg" alt="Producto Americano">
+            <div class="card-body">
+              <h3 class="card-title">Café Macchiato</h3>
+              <p class="card-text">El café americano es un tipo de café derivado del espresso el cual se caracteriza por añadir una cantidad
+                de agua mucho mayor de lo habitual en este tipo de preparación.</p>
+              <p class="card-text">$600</p>
+              <input class="card-text" type="number" id="cantidad_product" placeholder=" Ingrese cantidad">
+              <a onclick="shop('Café Macchiato',600)" class="btn btn-primary container">Agregar al carrito</a>
+            </div>
           </article>
         </div>
       </div>
