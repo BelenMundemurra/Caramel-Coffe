@@ -51,7 +51,6 @@ function shop(coffe, price) {
 }
 
 function cart(){
-    let precioFinal = 0 
     const Coffe = (pedidos.map((element) => element.cantidad + " " + element.coffe + "\n" ));
     const Precio = (pedidos.map((element) => (element.precio)));
     let total = 0;
