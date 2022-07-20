@@ -42,24 +42,17 @@ function cart(){
     let pedidosJson = localStorage.getItem('1');
     const pedidosCart = JSON.parse(pedidosJson);
 
-    //console.log(pedidosCart)
     let conteiner = document.getElementById("detail_coffe");
 
-    if (pedidosCart) {
+    //Constantes para carrito con pedidos
+    const Coffe = (pedidosCart.map((element) => element.cantidad + " " + element.coffe + "\n" ));
+    const Precio = (pedidosCart.map((element) => (element.precio)));
 
-        const Coffe = (pedidosCart.map((element) => element.cantidad + " " + element.coffe + "\n" ));
-        const Precio = (pedidosCart.map((element) => (element.precio)));
+    //Precio total
+    const total = Precio.reduce((acc,el) => acc + el ,0)
 
-        //Precio total
-        const total = Precio.reduce((acc,el) => acc + el ,0)
-
-        //Resumen carrito
-        conteiner.innerHTML = "<h3>Producto: "+Coffe+"</h3><h3>Precio total: " + total + "</h3>";
-
-    } else {
-        //Resumen carrito
-        conteiner.innerHTML = "<h3>El carrito esta vacio</h3>";
-    }
+    //Operador Ternario para el carrito
+    pedidosCart?conteiner.innerHTML = "<h3>Producto: "+Coffe+"</h3><h3>Precio total: " + total + "</h3>":conteiner.innerHTML = "<h3>El carrito esta vacio</h3>";
 }
 
 cart();
